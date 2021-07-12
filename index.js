@@ -12,17 +12,17 @@ const questions = [
     },
     {
         type: "input",
-        message: "Give a brief description of your project (< 30 characters):",
+        message: "Give a brief description of your project:",
         name: "description"
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "Enter table of contents:",
         name: "tableOfContents"
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "Provide instructions for installation:",
         name: "installation"
     },
     {
@@ -32,22 +32,22 @@ const questions = [
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "What license was used for this project?",
         name: "license"
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "How can others contribute?",
         name: "contributing"
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "What tests are included?",
         name: "tests"
     },
     {
         type: "input",
-        message: "Provide instructions for use:",
+        message: "Questions?",
         name: "questions"
     },
 ];
