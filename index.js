@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -25,7 +26,17 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    // Use `inquirer.prompt()` to prompt the user for answers
+    inquirer
+        .prompt(questions)
+        // THEN we'll use the user's `answers` to `generateMarkdown(answers)` and store the result in `markdownText`
+        .then((answers) => {
+            generateMarkdown(answers)
+        // Use the generated `markdownText` to `writeToFile("output.md",markdownText)
+        })
+
+}
 
 // Function call to initialize app
 init();
