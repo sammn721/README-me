@@ -17,20 +17,42 @@ function renderLicenseSection(license) {
 function renderTitle(title) {
   return `# ${title}`
 }
-
-function renderBrief(brief) {
-  return `# ${brief}`
+function renderDescription(description) {
+  return `# ${description}`
 }
-
-function renderInstructions(instructions) {
-  return `# ${instructions}`
+function renderTableOfContents(tableOfContents) {
+  return `# ${tableOfContents}`
+}
+function renderInstallation(installation) {
+  return `# ${installation}`
+}
+function renderUsage(usage) {
+  return `# ${usage}`
+}
+function renderLicense(license) {
+  return `# ${license}`
+}
+function renderContributing(contributing) {
+  return `# ${contributing}`
+}
+function renderTests(tests) {
+  return `# ${tests}`
+}
+function renderQuestions(questions) {
+  return `# ${questions}`
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)}
-  \n${renderBrief(data.brief)}
-  \n${renderInstructions(data.instructions)}
+  \n${renderDescription(data.description)}
+  \n${renderTableOfContents(data.tableOfContents)}
+  \n${renderInstallation(data.installation)}
+  \n${renderUsage(data.usage)}
+  \n${renderLicense(data.license)}
+  \n${renderContributing(data.contributing)}
+  \n${renderTests(data.tests)}
+  \n${renderQuestions(data.questions)}
   \n${renderLicenseBadge(data.license)}
   \n${renderLicenseLink(data.license)}
   \n${renderLicenseSection(data.license)}

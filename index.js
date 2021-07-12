@@ -13,12 +13,42 @@ const questions = [
     {
         type: "input",
         message: "Give a brief description of your project (< 30 characters):",
-        name: "brief"
+        name: "description"
     },
     {
         type: "input",
         message: "Provide instructions for use:",
-        name: "instructions"
+        name: "tableOfContents"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "license"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "contributing"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "tests"
+    },
+    {
+        type: "input",
+        message: "Provide instructions for use:",
+        name: "questions"
     },
 ];
 
