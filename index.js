@@ -34,10 +34,10 @@ function init() {
         .prompt(questions)
         // THEN we'll use the user's `answers` to `generateMarkdown(answers)` and store the result in `markdownText`
         .then((answers) => {
-            generateMarkdown(answers)
+            const markdownText = generateMarkdown(answers);
+            writeToFile("README.md", markdownText);
         // Use the generated `markdownText` to `writeToFile("output.md",markdownText)
-        })
-
+        });
 }
 
 // Function call to initialize app
