@@ -1,11 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== "none") {
-    return `![${license} license](https://img.shields.io/badge/License-${license}-informational)`;
-  } else if (license === "none") {
-    return ``;
-  }
+
 }
 
 // TODO: Create a function that returns the license link
@@ -24,28 +20,28 @@ function renderTitle(title) {
   return `# ${title}`
 }
 function renderDescription(description) {
-  return `# ${description}`
+  return `## Description\n${description}`
 }
 function renderTableOfContents(tableOfContents) {
-  return `# ${tableOfContents}`
+  return `## Table of Contents\n${tableOfContents}`
 }
 function renderInstallation(installation) {
-  return `# ${installation}`
+  return `## Installation\n${installation}`
 }
 function renderUsage(usage) {
-  return `# ${usage}`
+  return `## Usage\n${usage}`
 }
 function renderLicense(license) {
-  return `# ${license}`
+  return `## License\n${license}`
 }
 function renderContributing(contributing) {
-  return `# ${contributing}`
+  return `## Contributing\n${contributing}`
 }
 function renderTests(tests) {
-  return `# ${tests}`
+  return `## Tests\n${tests}`
 }
 function renderQuestions(questions) {
-  return `# ${questions}`
+  return `## Questions\n${questions}`
 }
 
 // TODO: Create a function to generate markdown for README
