@@ -23,7 +23,15 @@ function renderDescription(description) {
   return `## Description\n${description}`
 }
 function renderTableOfContents(tableOfContents) {
-  return `## Table of Contents\n${tableOfContents}`
+  return `
+  ## Table of Contents\n
+  1. [Installation](#installation)\n
+  2. [Usage](#usage)\n
+  3. [License](#license)\n
+  4. [Contributing](#contributing)\n
+  5. [Tests](#tests)\n
+  6. [Questions](#questions)\n
+  `
 }
 function renderInstallation(installation) {
   return `## Installation\n${installation}`
