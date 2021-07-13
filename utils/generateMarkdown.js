@@ -44,18 +44,18 @@ function renderQuestions(questions) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `${renderTitle(data.title)}
-  \n${renderDescription(data.description)}
-  \n${renderTableOfContents(data.tableOfContents)}
-  \n${renderInstallation(data.installation)}
-  \n${renderUsage(data.usage)}
-  \n${renderLicense(data.license)}
-  \n${renderContributing(data.contributing)}
-  \n${renderTests(data.tests)}
-  \n${renderQuestions(data.questions)}
-  \n${renderLicenseBadge(data.license)}
-  \n${renderLicenseLink(data.license)}
-  \n${renderLicenseSection(data.license)}
+  return `${renderTitle(data.title)}\n
+  ${renderDescription(data.description)}\n
+  ${renderTableOfContents(data.tableOfContents)}\n
+  ${renderInstallation(data.installation)}\n
+  ${renderUsage(data.usage)}\n
+  ${renderLicense(data.license)}\n
+  ${renderContributing(data.contributing)}\n
+  ${renderTests(data.tests)}\n
+  ${renderQuestions(data.questions)}\n
+  ${renderLicenseBadge(data.license)}\n
+  ${renderLicenseLink(data.license)}\n
+  ${renderLicenseSection(data.license)}
 
 `;
 }
