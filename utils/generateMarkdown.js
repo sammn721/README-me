@@ -41,7 +41,7 @@ function renderTests(tests) {
   return `## Tests\n${tests}`
 }
 function renderQuestions(questions) {
-  return `## Questions\n${questions}`
+  return `## ${questions}`
 }
 
 // TODO: Create a function to generate markdown for README
