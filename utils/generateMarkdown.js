@@ -1,13 +1,24 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
+  switch(license) {
+    case 'Apache-2.0':
+      return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]';
+    case 'MIT':
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
+    case 'GPLv2':
+      return '[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)]';
+    case 'GPLv3':
+      return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
+    case 'No license':
+      return ''
+  }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  
 }
 
 // TODO: Create a function that returns the license section of README
@@ -22,7 +33,7 @@ function renderTitle(title) {
 function renderDescription(description) {
   return `## Description\n${description}`
 }
-function renderTableOfContents(tableOfContents) {
+function renderTableOfContents() {
   return `
   ## Table of Contents\n
   1. [Installation](#installation)\n
@@ -38,9 +49,6 @@ function renderInstallation(installation) {
 }
 function renderUsage(usage) {
   return `## Usage\n${usage}`
-}
-function renderLicense(license) {
-  return `## License\n${license}`
 }
 function renderContributing(contributing) {
   return `## Contributing\n${contributing}`
@@ -59,7 +67,7 @@ function generateMarkdown(data) {
   ${renderTableOfContents(data.tableOfContents)}\n
   ${renderInstallation(data.installation)}\n
   ${renderUsage(data.usage)}\n
-  ${renderLicense(data.license)}\n
+  ${renderLicenseSection(data.license)}\n
   ${renderContributing(data.contributing)}\n
   ${renderTests(data.tests)}\n
   ${renderQuestions(data.questions)}\n
