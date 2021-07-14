@@ -3,11 +3,11 @@
 function renderLicenseBadge(license) {
   switch(license) {
     case "Apache-2.0":
-      return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+      return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
     case "MIT":
-      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
     case "GPLv3":
-      return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     case "No license":
       return ""
   }
@@ -31,7 +31,10 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
+  if(license === "No license") {
+    "";
+  } else return `## License
+This project is ${license} licensed.` 
 }
 
 function renderTitle(title) {
@@ -70,22 +73,19 @@ function renderQuestions(questions) {
 ${questions}`
 }
 
-// TODO: Create a function to generate markdown for README
+// DONE: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)}
 ${renderLicenseBadge(data.license)}\n
-${renderLicenseLink(data.license)}\n
 ${renderDescription(data.description)}\n
 ${renderTableOfContents(data.tableOfContents)}\n
 ${renderInstallation(data.installation)}\n
 ${renderUsage(data.usage)}\n
-${renderLicenseSection(data.license)}\n
+${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}\n
 ${renderContributing(data.contributing)}\n
 ${renderTests(data.tests)}\n
-${renderQuestions(data.questions)}\n
-${renderLicenseBadge(data.license)}\n
-${renderLicenseLink(data.license)}\n
-${renderLicenseSection(data.license)}`;
+${renderQuestions(data.questions)}\n`;
 }
 
 module.exports = generateMarkdown;
