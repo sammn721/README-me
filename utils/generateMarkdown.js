@@ -6,8 +6,6 @@ function renderLicenseBadge(license) {
       return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
     case "MIT":
       return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
-    case "GPLv2":
-      return "![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)";
     case "GPLv3":
       return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
     case "No license":
@@ -25,8 +23,6 @@ function renderLicenseLink(license) {
       return "(https://opensource.org/licenses/MIT)";
     case "GPLv3":
       return "(https://www.gnu.org/licenses/gpl-3.0)";
-    case "GPLv2":
-      return "(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
     case "No license":
       return "";
   }
@@ -77,6 +73,8 @@ ${questions}`
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderTitle(data.title)}
+${renderLicenseBadge(data.license)}\n
+${renderLicenseLink(data.license)}\n
 ${renderDescription(data.description)}\n
 ${renderTableOfContents(data.tableOfContents)}\n
 ${renderInstallation(data.installation)}\n
