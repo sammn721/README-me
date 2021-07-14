@@ -34,7 +34,7 @@ function renderLicenseSection(license) {
   if(license === "No license") {
     "";
   } else return `## License
-This project is ${renderLicenseLink} licensed.`
+This project is ${renderLicenseLink(license)} licensed.`
 }
 
 function renderTitle(title) {
@@ -80,8 +80,7 @@ ${renderDescription(data.description)}\n
 ${renderTableOfContents(data.tableOfContents)}\n
 ${renderInstallation(data.installation)}\n
 ${renderUsage(data.usage)}\n
-${renderLicenseSection(data.license)}
-${renderLicenseLink(data.license)}\n
+${renderLicenseSection(data.license)}\n
 ${renderContributing(data.contributing)}\n
 ${renderTests(data.tests)}\n
 ${renderQuestions(data.questions)}\n`;
