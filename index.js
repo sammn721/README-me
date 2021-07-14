@@ -28,7 +28,7 @@ const questions = [
     {
         type: "list",
         message: "What license was used for this project?",
-        choices: ['MIT License', 'GNU General Public License (GPL) 2.0', 'Apache License 2.0', 'No license'],
+        choices: ['Apache-2.0', 'MIT', 'GPLv3', 'GPLv2', 'No license'],
         name: "license"
     },
     {

@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   switch(license) {
     case "Apache-2.0":
-      return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+      return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
     case "MIT":
-      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
     case "GPLv2":
-      return "[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)]";
+      return "![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)";
     case "GPLv3":
-      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
+      return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
     case "No license":
       return ""
   }
@@ -42,51 +42,52 @@ function renderTitle(title) {
   return `# ${title}`
 }
 function renderDescription(description) {
-  return `## Description\n${description}`
+  return `${description}`
 }
 function renderTableOfContents() {
-  return `
-  ## Table of Contents\n
-  1. [Installation](#installation)\n
-  2. [Usage](#usage)\n
-  3. [License](#license)\n
-  4. [Contributing](#contributing)\n
-  5. [Tests](#tests)\n
-  6. [Questions](#questions)\n
-  `
+  return `## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)`
 }
 function renderInstallation(installation) {
-  return `## Installation\n${installation}`
+  return `## Installation
+${installation}`
 }
 function renderUsage(usage) {
-  return `## Usage\n${usage}`
+  return `## Usage
+${usage}`
 }
 function renderContributing(contributing) {
-  return `## Contributing\n${contributing}`
+  return `## Contributing
+${contributing}`
 }
 function renderTests(tests) {
-  return `## Tests\n${tests}`
+  return `## Tests
+${tests}`
 }
 function renderQuestions(questions) {
-  return `## ${questions}`
+  return `## Questions
+${questions}`
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `${renderTitle(data.title)}\n
-  ${renderDescription(data.description)}\n
-  ${renderTableOfContents(data.tableOfContents)}\n
-  ${renderInstallation(data.installation)}\n
-  ${renderUsage(data.usage)}\n
-  ${renderLicenseSection(data.license)}\n
-  ${renderContributing(data.contributing)}\n
-  ${renderTests(data.tests)}\n
-  ${renderQuestions(data.questions)}\n
-  ${renderLicenseBadge(data.license)}\n
-  ${renderLicenseLink(data.license)}\n
-  ${renderLicenseSection(data.license)}
-
-`;
+  return `${renderTitle(data.title)}
+${renderDescription(data.description)}\n
+${renderTableOfContents(data.tableOfContents)}\n
+${renderInstallation(data.installation)}\n
+${renderUsage(data.usage)}\n
+${renderLicenseSection(data.license)}\n
+${renderContributing(data.contributing)}\n
+${renderTests(data.tests)}\n
+${renderQuestions(data.questions)}\n
+${renderLicenseBadge(data.license)}\n
+${renderLicenseLink(data.license)}\n
+${renderLicenseSection(data.license)}`;
 }
 
 module.exports = generateMarkdown;
