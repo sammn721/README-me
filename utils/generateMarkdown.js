@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// DONE: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch(license) {
@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// DONE: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch(license) {
@@ -28,7 +28,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// DONE: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license === "No license") {
@@ -68,9 +68,10 @@ function renderTests(tests) {
   return `## Tests
 ${tests}`
 }
-function renderQuestions(questions) {
+function renderQuestions(username, email) {
   return `## Questions
-${questions}`
+Find more information about this and other projects on my [GitHub profile](https://github.com/${username}).
+Additional questions? Please contact me at ${email}!`
 }
 
 // DONE: Create a function to generate markdown for README
@@ -83,7 +84,7 @@ ${renderUsage(data.usage)}\n
 ${renderLicenseSection(data.license)}\n
 ${renderContributing(data.contributing)}\n
 ${renderTests(data.tests)}\n
-${renderQuestions(data.questions)}\n`;
+${renderQuestions(data.username, data.email)}\n`;
 }
 
 module.exports = generateMarkdown;

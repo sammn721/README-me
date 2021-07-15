@@ -5,7 +5,7 @@ A README file generator
 The goal of this project is to write a program tto generate README files more detailed than any I've made up to this point.
 
 ## Installation
-- Open integrated terminal.
+- Open terminal at application folder.
 - Install dependencies `npm i`.
 - Run README-me `node index.js`.
 

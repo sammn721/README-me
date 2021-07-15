@@ -28,7 +28,7 @@ const questions = [
     {
         type: "list",
         message: "What license was used for this project?",
-        choices: ['Apache-2.0', 'MIT', 'GPLv3', 'GPLv2', 'No license'],
+        choices: ['Apache-2.0', 'MIT', 'GPLv3', 'No license'],
         name: "license"
     },
     {
@@ -43,9 +43,14 @@ const questions = [
     },
     {
         type: "input",
-        message: "Questions?",
-        name: "questions"
+        message: "What is your GitHub username?",
+        name: "username"
     },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email"
+    }
 ];
 
 // DONE: Create a function to write README file
