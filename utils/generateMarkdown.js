@@ -76,7 +76,7 @@ Additional questions? Please contact me at ${email}!`
 
 // DONE: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `${renderTitle(data.title)}${renderLicenseBadge(data.license)}
+  return `${renderTitle(data.title)}<br>${renderLicenseBadge(data.license)}
 ${renderDescription(data.description)}\n
 ${renderTableOfContents(data.tableOfContents)}\n
 ${renderInstallation(data.installation)}\n

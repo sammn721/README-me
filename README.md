@@ -7,7 +7,7 @@ The goal of this project is to write a program tto generate README files more de
 ## Installation
 - Open terminal at application folder.
 - Install dependencies `npm i`.
-- Run README-me `node index.js`.
+- Run READMEme `node index.js`.
 
 ## Usage
 Video demo to go here.
