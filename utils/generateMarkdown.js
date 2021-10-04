@@ -70,8 +70,8 @@ ${tests}`
 }
 function renderQuestions(username, email) {
   return `## Questions
-Find more information about this and other projects on my [GitHub profile](https://github.com/${username}).
-Additional questions? Please contact me at ${email}!`
+Additional questions? Please contact me at ${email}!
+Find more information about this and other projects on my [GitHub profile](https://github.com/${username}).`
 }
 
 // DONE: Create a function to generate markdown for README
